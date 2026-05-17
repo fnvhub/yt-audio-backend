@@ -22,11 +22,12 @@ def info():
     if not url or not is_valid_youtube_url(url):
         return jsonify({"error": "URL de YouTube no válida"}), 400
 
-    ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
-        'skip_download': True,
-    }
+   ydl_opts = {
+    'quiet': True,
+    'no_warnings': True,
+    'skip_download': True,
+    'cookiefile': 'cookies.txt',
+}
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
@@ -47,11 +48,11 @@ def audio():
         return jsonify({"error": "URL de YouTube no válida"}), 400
 
     ydl_opts = {
-        'quiet': True,
-        'no_warnings': True,
-        'format': 'bestaudio[ext=m4a]/bestaudio/best',
-        'skip_download': True,
-    }
+    'quiet': True,
+    'no_warnings': True,
+    'skip_download': True,
+    'cookiefile': 'cookies.txt',
+}
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
