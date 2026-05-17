@@ -25,7 +25,7 @@ def info():
         'quiet': True,
         'no_warnings': True,
         'skip_download': True,
-        'cookiefile': 'cookies.txt',
+        # 'cookiefile': 'cookies.txt',
         'format': None,
     }
 
@@ -51,7 +51,7 @@ def audio():
         'quiet': True,
         'no_warnings': True,
         'skip_download': True,
-        'cookiefile': 'cookies.txt',
+        # 'cookiefile': 'cookies.txt',
         'format': None,
     }
 
