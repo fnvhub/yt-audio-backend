@@ -49,7 +49,7 @@ def audio():
     ydl_opts = {
         'quiet': True,
         'no_warnings': True,
-        'format': 'bestaudio[ext=m4a]/bestaudio/best',
+        'format': 'bestaudio/best',
         'skip_download': True,
         'cookiefile': 'cookies.txt',
     }
